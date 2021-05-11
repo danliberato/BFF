@@ -1,0 +1,19 @@
+{
+  "name": "bff-payments",
+  "version": "0.0.1",
+  "description": "BFF proof of concept",
+  "main": "index.js",
+  "scripts": {
+    "gendocs": "npm run start-gendoc",
+    "start": "node index"
+  },
+  "author": "Daniel Liberato",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-http-proxy": "^1.6.2",
+    "http": "^0.0.1-security",
+    "express-list-endpoints": "^5.0.0"
+  }
+}

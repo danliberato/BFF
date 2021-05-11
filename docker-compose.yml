@@ -1,0 +1,27 @@
+version: '2.1'
+services:
+  stub:
+    build: ./docker/stubby
+    volumes:
+      - "./docker/stubby:/stubby"
+    entrypoint:
+      - stubby
+      - -d
+      - stub.json
+    ports:
+      - 8882:8882
+      - 8889:8889
+#     networks:
+#       mongo_net:
+#         ipv4_address: 172.16.0.3
+
+# networks:
+#   mongo_net:
+#     driver: bridge
+#     ipam:
+#       config:
+#         - subnet: 172.16.0.0/24
+#           gateway: 172.16.0.254
+
+# volumes:
+#   MONGO_DATA:
