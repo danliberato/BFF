@@ -1,7 +1,7 @@
 ## How to run
 Execute mock with docker:
 ```bash
-$ docker-compuse up --build stub
+$ docker-compose up --build stub
 ```
 Install dependencies and run project
 ```bash
