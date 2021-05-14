@@ -13,16 +13,13 @@ we can mock whatever we need until the dependencies (services) are done, so we c
 -------------------------------------
 GOALS
 -------------------------------------
-1- exemplo de proxy de get e de post
-2- exemplo de orquestração, chamando 2 endpoints e juntando as informações deles (tipo o account com o company-metadata)
-3- remoção de payload, ou seja, o serviço alvo retorna vários campos e o BFF
-dá uma limpada e retorna 1 ou 2 campos
-e também post com mudança de payload
-vc faz um post com uma estrutura ele manda post pra frente em outra
-acho que com esses exmeplo fica bem legal
-monta direito esses exemplos no readme
-também explicando
-
------------------
+1 - (WIP) exemplo de proxy de GET e de POST
+2 - exemplo de orquestração
+    chamando 2 endpoints e juntando as informações deles (tipo o account com o company-metadata)
+3 - remoção de payload:
+    o serviço alvo retorna vários campos e o BFF dá uma limpada e retorna 1 ou 2 campos
+4 - post com mudança de payload:
+    vc faz um post com uma estrutura ele manda post pra frente em outra
+-------------------------------------
 verificar se os headers estão sendo passados
 checar com todos os verbos (GET, POST, PUT, PATCH, DELETE)

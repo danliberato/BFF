@@ -5,5 +5,7 @@ target/
 **/node_modules/**
 package-lock.json
 
+### WebStorm IDE ###
+.idea/
 ### VS Code ###
 .vscode/

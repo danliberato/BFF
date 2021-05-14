@@ -1,13 +1,7 @@
-var http = require("http");
-var express = require("express");
-var routes = require("./src/routes");
-var cors = require("cors");
+let express = require("express");
+let routes = require("./src/routes");
 
 const app = express();
-const server = http.createServer(app);
-
-app.use(cors());
 
 routes.init(app);
-
-server.listen(9000);
+app.listen(9000);
