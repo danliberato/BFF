@@ -1,8 +1,8 @@
 version: '2.1'
 services:
   stub:
+    container_name: stubby
     build: ./docker/stubby
-    container_name: stub
     volumes:
       - "./docker/stubby:/stubby"
     entrypoint:

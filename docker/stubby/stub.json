@@ -1,5 +1,43 @@
 [
   {
+  "request": {
+    "url": "^/accounts",
+    "method": "GET",
+    "query":{
+      "accountId":"ACC_123456"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": [{
+      "_id" : "b2f32b26-3715-4f4c-b31d-7ef45b0d7769",
+      "country" : "US",
+      "credit" : {
+        "balance" : "77",
+        "overdue" : "7",
+        "available" : "777",
+        "paymentTerms" : "string",
+        "total" : "90",
+        "deleted" : false,
+        "consumption" : "7"
+      },
+      "deleted" : false,
+      "vendorId": "VD_123456",
+      "accountId": "ACC_123456",
+      "owner": {
+        "email": "dliberato@mailinator.com",
+        "firstName": "Uncle",
+        "lastName":"Bob",
+        "phone": "12345678"
+      }
+    }
+    ]
+  }
+},
+  {
     "request": {
       "url": "^/accounts",
       "method": "GET"
@@ -55,43 +93,6 @@
       }
     ]
     }
-  },{
-    "request": {
-      "url": "^/accounts",
-      "method": "GET",
-      "query":{
-        "accountId":"ACC_123456"
-      }
-    },
-    "response": {
-      "status": 200,
-      "headers": {
-        "Content-Type": "application/json"
-      },
-      "body": [{
-        "_id" : "b2f32b26-3715-4f4c-b31d-7ef45b0d7769",
-        "country" : "US",
-        "credit" : {
-          "balance" : "77",
-          "overdue" : "7",
-          "available" : "777",
-          "paymentTerms" : "string",
-          "total" : "90",
-          "deleted" : false,
-          "consumption" : "7"
-        },
-        "deleted" : false,
-        "vendorId": "VD_123456",
-        "accountId": "ACC_123456",
-        "owner": {
-          "email": "dliberato@mailinator.com",
-          "firstName": "Uncle",
-          "lastName":"Bob",
-          "phone": "12345678"
-        }
-      }
-    ]
-    }
   },
   {
     "request": {
@@ -137,55 +138,6 @@
           "email": "dliberato@mailinator.com"
         }
       }
-    }
-  },
-  {
-    "request": {
-      "url": "^/products",
-      "method": "GET"
-    },
-    "response": {
-      "status": 200,
-      "headers": {
-        "Content-Type": "application/json"
-      },
-      "body": [
-        {
-           "id":1,
-           "name":"Jaleco",
-           "description":"Jaleco de alta qualidade fabricado para atender aos clientes mais exigentes",
-           "price": 123.99,
-           "available":true
-        },
-        {
-           "id":2,
-           "name":"Avental",
-           "description":"Avental de alta qualidade fabricado para atender aos clientes mais exigentes",
-           "price": 321.99,
-           "available":true
-        },
-        {
-           "id":3,
-           "name":"Touca",
-           "description":"Touca de alta qualidade fabricado para atender aos clientes mais exigentes",
-           "price": 222.99,
-           "available":true
-        },
-        {
-           "id":4,
-           "name":"Fronha",
-           "description":"Fronha de alta qualidade fabricado para atender aos clientes mais exigentes",
-           "price": 333.99,
-           "available":true
-        },
-        {
-           "id":5,
-           "name":"Embalagem",
-           "description":"Embalagem de alta qualidade fabricado para atender aos clientes mais exigentes",
-           "price": 111.99,
-           "available":true
-        }
-     ]
     }
   }
 ]

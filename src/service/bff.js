@@ -1,11 +1,12 @@
 const axios = require('axios');
+const querystring = require('querystring');
 const accountsAdapter = require('../adapter/accounts');
 const productsAdapter = require('../adapter/products');
 const vendorsAdapter = require('../adapter/vendors');
 const path = require('../../environment');
 
 exports.getProducts = (req, res, next) => {
-    const productsService = axios.get(path.services.PRODUCTS);
+    const productsService = axios.get(path.services.PRODUCTS_SERVICE);
 
     Promise.all([productsService]).then(
        ([products]) => res.json({
@@ -15,7 +16,7 @@ exports.getProducts = (req, res, next) => {
 }
 
 exports.getAccounts = (req, res, next) => {
-    const accountsService =  axios.get(path.services.ACCOUNTS);
+    const accountsService =  axios.get(path.services.ACCOUNTS_SERVICE, querystring.stringify(req.query));
 
     Promise.all([accountsService]).then(
        ([accounts]) => res.json({
@@ -25,7 +26,7 @@ exports.getAccounts = (req, res, next) => {
 }
 
 exports.getVendors = (req, res, next) => {
-    const vendorsService =  axios.get(path.services.VENDORS);
+    const vendorsService =  axios.get(path.services.VENDORS_SERVICE);
 
     Promise.all([vendorsService]).then(
        ([vendors]) => res.json({
@@ -34,9 +35,9 @@ exports.getVendors = (req, res, next) => {
     );
 }
 
-exports.getAccountsAndVendors = (req, res, next) => {
-    const accountsService =  axios.get(path.services.ACCOUNTS);
-    const vendorsService =  axios.get(path.services.VENDORS);
+exports.getAccountAndVendor = (req, res, next) => {
+    const accountsService =  axios.get(path.services.ACCOUNTS_SERVICE, querystring.stringify(req.query));
+    const vendorsService =  axios.get(path.services.VENDORS_SERVICE);
 
     //TODO: implement some business rule using the account.vendorId and the vendor._id
     //      to show a handled response

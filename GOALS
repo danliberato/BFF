@@ -7,7 +7,6 @@ start a base project (node, pipes)
 2) how to test the BFF and backend
 3) standardize the screen (ios, android and web)
 
-
 we can mock whatever we need until the dependencies (services) are done, so we can slowly rollout
 
 -------------------------------------

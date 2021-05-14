@@ -6,9 +6,9 @@ exports.accounts = (data) => {
     data.forEach(account => {
         response.push({
             id: account._id,
-            pais : account.country,
+            country : account.country,
             email: account.owner.email,
-            nome: utils.nameComposer(account.owner.firstName, account.owner.lastName)
+            name: utils.nameComposer(account.owner.firstName, account.owner.lastName)
         });
     });
     
